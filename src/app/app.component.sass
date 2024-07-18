@@ -1,0 +1,316 @@
+@import '../app/defaults/_variables'
+
+// Keyframes for animations
+@keyframes gradientAnimation
+  0%
+    background-position: 0% 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 50%
+
+@keyframes short-typing
+  from
+    width: 0
+  to
+    width: 20ch
+
+@keyframes long-typing
+  from
+    width: 0
+  to
+    width: 62ch
+
+@keyframes blink-caret
+  from, to
+    border-color: transparent
+  50%
+    border-color: #e9e9e9
+
+// General flex utilities
+.flex-row
+  display: flex
+
+.flex-column
+  display: flex
+  flex-direction: column
+
+// Main container styling
+main
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  app-navbar
+    width: 100%
+
+// Section styling
+section
+  min-height: 100vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  padding: 20px
+  align-items: center
+  &.intro
+    transition: opacity 0.5s ease-in-out
+    width: 100%
+    display: flex
+    flex-direction: row
+    padding: 0
+    justify-content: center
+    align-items: center
+    background: linear-gradient(270deg, black, #333, black)
+    background-size: 200% 200%
+    padding-top: 80px
+    // background-size: cover
+    animation: gradientAnimation 5s ease infinite
+
+    & > div
+      flex: 1
+      height: 100%
+      padding: 10px
+
+    .my-details
+      padding: 25px
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      align-items: flex-start
+      gap: 40px
+      font-weight: bold
+
+      .basic-info
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        align-items: flex-start
+        // gap: 25px
+
+        .typing-container
+          width: 24ch
+          border-right: 4px solid #e9e9e9 // Cursor effect
+          white-space: nowrap
+          overflow: hidden
+          animation: short-typing 2s steps(20) 1s 1 normal both, blink-caret 0.75s step-end infinite
+          position: relative
+          z-index: 9999
+
+          h1
+            margin: 0
+
+      .contact-info
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr))
+        gap: 20px
+
+        p, a
+          font-size: 12px
+
+        .contact-item
+          display: flex
+          flex-direction: column
+          // gap: 12px
+          justify-content: space-evenly
+          align-items: flex-start
+          &:not(:last-child)
+            border-right: 2px solid white
+
+    .my-image
+      min-height: calc(100vh - 80px)
+      width: 100%
+      position: relative
+      background-image: url('/assets/images/me-normal.png')
+      background-size: cover
+      background-repeat: no-repeat
+      filter: grayscale(60%)
+
+    &.cool
+      .cool-btn
+        background: linear-gradient(45deg, #45616c, #e8a41e, #9bd1c5)
+        border: 1px solid white
+        &:hover
+          background: linear-gradient(45deg, #9bd1c5, #e8a41e, #45616c)
+
+      display: none
+      background-image: url('/assets/images/bg.gif')
+      animation: none
+      opacity: 0
+
+      .my-image
+        background-image: url('/assets/images/me-cool.png')
+        filter: grayscale(30%)
+
+      .my-details
+        *
+          text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black
+
+        .basic-info
+          .typing-container
+            animation: short-typing 2s steps(20) 1s 1 normal both, blink-caret 0.75s step-end infinite
+  &.skills
+    // background-image: url('/assets/images/still-life-vase-with-fifteen-sunflowers-1888.jpg')
+    background-image: url('/assets/images/sower-with-setting-sun-1888.jpg')
+    // background-image: url('/assets/images/wheatfield-with-crows-1890.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+
+  &.projects
+    // background-image: url('/assets/images/still-life-vase-with-fifteen-sunflowers-1888.jpg')
+    // background-image: url('/assets/images/sower-with-setting-sun-1888.jpg')
+    // background-image: url('/assets/images/wheatfield-with-crows-1890.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+  &.about
+    background-color: #000
+    color: #fff
+
+    .row
+      display: flex
+      flex-direction: row
+      gap: 2rem
+      flex-wrap: wrap
+      padding: 40px
+
+      .image
+        flex: 1 1 300px
+        text-align: center
+        
+
+        img
+          width: 300px
+          height: 300px
+          filter: grayscale(100%)
+          border-radius: 10px
+          box-shadow: 0 5px 10px rgba(255, 255, 255, 0.6)
+          cursor: pointer
+          &:hover
+            filter: none
+
+      .content
+        flex: 1 1 300px
+
+.grid
+  display: grid
+  grid-template-columns: repeat(6, 1fr)
+  gap: 23px
+  padding: 20px 40px
+  border-radius: 10px
+  .card-container
+    .skill-card
+      min-width: 80px
+      min-height: 80px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      gap: 10px
+      background-color: #fff
+      border: 2px solid $primary
+      padding: 10px
+      text-align: center
+      color: $text-secondary
+      border-radius: 50px
+      cursor: pointer
+      img
+        width: 50px
+        filter: grayscale(100%)
+      &:hover
+        img
+          filter: none
+
+        
+
+// Cool button styling
+.cool-btn
+  // font-family: $font-family-secondary
+  background: linear-gradient(45deg, #45616c, #3fa69e, #9bd1c5)
+  border: none
+  border-radius: 25px
+  color: white
+  padding: 10px 20px
+  font-size: 16px
+  font-weight: bold
+  text-transform: uppercase
+  cursor: pointer
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2)
+  transition: background 0.9s ease, box-shadow 0.3s ease, transform 0.3s ease
+  position: relative
+  z-index: 9999
+  text-shadow: none !important
+
+  &:hover
+    background: linear-gradient(45deg, #9bd1c5, #3fa69e, #45616c)
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3)
+    transform: scale(1.1)
+
+  &:active
+    transform: scale(1)
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2)
+
+  &:focus
+    outline: none
+
+// Miscellaneous styling
+.wise-p
+  margin: 25px 0
+  z-index: 9999999
+  position: relative
+  line-height: 2
+  font-family: $font-family-secondary
+
+.fire-svg
+  position: absolute
+  top: -102px
+  left: 49px
+
+.art
+  cursor: pointer
+  padding: 8px
+
+.drowning-note
+  padding: 10px
+  background-color: white
+  position: absolute
+  height: 90px !important
+  line-height: 2
+  right: 40px
+  color: black
+  width: 180px
+  border-top-left-radius: 10px
+  border-bottom-left-radius: 10px
+  border-top-right-radius: 10px
+  top: 45%
+  display: none
+  
+
+@media (min-width: 681px) and (max-width: 765px)
+  .drowning-note
+    display: block
+
+@media (max-width: 680px)
+  .intro
+    .my-image
+      display: none
+    .contact-info
+      display: flex
+      gap: 10px
+    // flex-direction: column !important
+
+@media (max-width: 414px)
+  .supercali
+    font-size: 20px
+  
+  .row
+    padding: 17px !important
+
+@media (max-width: 768px) 
+  .grid
+    grid-template-columns: repeat(4, 1fr)
+
+@media (max-width: 480px) 
+  .grid
+    grid-template-columns: repeat(2, 1fr)
+
+

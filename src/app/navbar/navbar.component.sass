@@ -1,0 +1,49 @@
+@import '../defaults/_variables'
+  
+nav
+  width: 90%
+  height: 60px
+  background-color: rgba(0, 0, 0, 0.7)
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  padding: 10px 40px
+  color: white
+  border-radius: 50px
+  position: fixed
+  top: 20px
+  left: 50%
+  transform: translateX(-50%)
+  box-shadow: 0 0 2px white
+  transition: top 0.3s
+  z-index: 99999999999999999999
+
+.sections, .social, .hiring-info
+  display: flex
+  gap: 20px
+  align-items: center
+
+
+.progress-bar 
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 0.08rem
+    background-image: linear-gradient(to right, white, #fa7196)
+    border-radius: 0.1rem
+    animation: progressMove linear both
+    animation-timeline: scroll(block root)
+
+@keyframes progressMove 
+  from 
+    width: 0%
+  
+  to 
+    width: 100%
+  
+
+
+@media (max-width: 680px) 
+  .logo
+    display: none

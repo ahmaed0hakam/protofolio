@@ -1,0 +1,49 @@
+:host
+    display: block
+    width: 90%
+
+.slider
+    position: relative
+    overflow: hidden
+    width: 100%
+    margin: auto
+
+.slider-container
+    display: flex
+    transition: transform 0.3s ease
+    width: 100%
+
+.card
+    min-width: 50%
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    border-radius: 8px
+    padding: 20px 40px
+    box-sizing: border-box
+    background-color: white
+    text-align: center
+    color: black
+    border: 3px solid black
+    img
+      max-width: 100px
+    .card-desc, .tags
+      text-align: left
+
+button
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    background-color: rgba(255, 255, 255, 0.7)
+    border: none
+    padding: 10px
+    cursor: pointer
+    z-index: 10
+
+.prev
+    left: 10px
+
+.next
+    right: 10px
+
+@media (max-width: 768px) 
+  .card
+    min-width: 100%
