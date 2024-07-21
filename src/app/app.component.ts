@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { CardSliderComponent } from './card-slider/card-slider.component';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, CommonModule, CardSliderComponent],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, CardSliderComponent, MatIcon],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass',
   host: {
@@ -55,6 +56,7 @@ export class AppComponent {
   }
 
   fireArt = false;
+  expandedFooter = true;
 
   onMouseEnter() {
     if (!this.introCollapsed) {
@@ -89,5 +91,9 @@ export class AppComponent {
         this.renderer.setStyle(normalIntroElement, 'display', 'flex');
       }, 1000);
     }
+  }
+
+  toggleFooter() {
+    this.expandedFooter = !this.expandedFooter
   }
 }
