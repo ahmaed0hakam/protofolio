@@ -14,7 +14,7 @@
             </defs>
             <g filter="url(#strong__blur)">  
               <circle cx="119" cy="146" r="200" fill="none"/> 
-              <circle cx="119" cy="146" r="30"> 
+              <circle cx="119" cy="146" r="40"> 
                  <animate attributeType="XML" attributeName="fill"
                           values="#9bd1c5; #3fa69; #45616c"
                           dur="1.4s" repeatCount="indefinite"/>
