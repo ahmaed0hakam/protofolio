@@ -119,6 +119,7 @@ section
 
     .my-image
       min-height: calc(100vh - 80px)
+      align-self: flex-end
       width: 100%
       position: relative
       // background-image: url('/assets/images/me-normal.png')
@@ -312,6 +313,10 @@ section
   .grid
     grid-template-columns: repeat(2, 1fr)
 
+@media (max-height: 600px) 
+  .section.intro
+    .my-image 
+      min-height: 130vh
 
 
 

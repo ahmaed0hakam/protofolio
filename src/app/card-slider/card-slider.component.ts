@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
+import { ICard } from './card.interface';
+
 
 @Component({
   selector: 'card-slider',
@@ -10,7 +12,7 @@ import { MatIcon } from '@angular/material/icon';
   styleUrl: './card-slider.component.sass'
 })
 export class CardSliderComponent {
-  cards = [
+  cards : ICard[] = [
     {
       title: 'masArI',
       description: 'Specialized web application designed to assist career shifters and returnees in creating personalized learning paths. Using GenAI, our platform curates courses, lessons, and learning paths tailored to individual needs. Additionally, masArI features a cutting-edge learning assistant (chat bot) for interactive guidance.',

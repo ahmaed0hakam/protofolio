@@ -19,30 +19,30 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'your-angular-app';
-  private skillsPrefix : string = "assets/images/skills/";
+  skillsPrefix : string = "assets/images/skills/";
   skills = [
-    {name: 'Angular', link: this.skillsPrefix + 'Angular.png'},
-    {name: 'AngularJS', link: this.skillsPrefix + 'AngularJS.png'},
-    {name: 'Flask', link: this.skillsPrefix + 'Flask.png'},
-    {name: 'Cakephp', link: this.skillsPrefix + 'Cakephp.png'},
-    {name: 'Mysql', link: this.skillsPrefix + 'Mysql.png'},
-    {name: 'Sqlite', link: this.skillsPrefix + 'Sqlite.png'},
-    {name: 'Sass', link: this.skillsPrefix + 'Sass.png'},
-    {name: 'Bootstrap', link: this.skillsPrefix + 'Bootstrap.png'},
-    {name: 'CSS', link: this.skillsPrefix + 'CSS3.png'},
-    {name: 'HTML', link: this.skillsPrefix + 'Html5.png'},
-    {name: 'Javascript', link: this.skillsPrefix + 'Javascript.png'},
-    {name: 'Typescript', link: this.skillsPrefix + 'Typescript.png'},
-    {name: 'Jquery', link: this.skillsPrefix + 'Jquery.png'},
-    {name: 'Python', link: this.skillsPrefix + 'Python.png'},
-    {name: 'Java', link: this.skillsPrefix + 'Java.png'},
-    {name: 'PHP', link: this.skillsPrefix + 'PHP.png'},
-    {name: 'Kotlin', link: this.skillsPrefix + 'Kotlin.png'},
-    {name: 'C++', link: this.skillsPrefix + 'C++.png'},
-    {name: 'Git', link: this.skillsPrefix + 'Git.png'},
-    {name: 'Bitbucket', link: this.skillsPrefix + 'Bitbucket.png'},
-    {name: 'Github', link: this.skillsPrefix + 'Github.png'},
-    {name: 'Jira', link: this.skillsPrefix + 'Jira.png'},
+    {name: 'Angular', icon: 'Angular.png'},
+    {name: 'AngularJS', icon: 'AngularJS.png'},
+    {name: 'Flask', icon: 'Flask.png'},
+    {name: 'Cakephp', icon: 'Cakephp.png'},
+    {name: 'Mysql', icon: 'Mysql.png'},
+    {name: 'Sqlite', icon: 'Sqlite.png'},
+    {name: 'Sass', icon: 'Sass.png'},
+    {name: 'Bootstrap', icon: 'Bootstrap.png'},
+    {name: 'CSS', icon: 'CSS3.png'},
+    {name: 'HTML', icon: 'Html5.png'},
+    {name: 'Javascript', icon: 'Javascript.png'},
+    {name: 'Typescript', icon: 'Typescript.png'},
+    {name: 'Jquery', icon: 'Jquery.png'},
+    {name: 'Python', icon: 'Python.png'},
+    {name: 'Java', icon: 'Java.png'},
+    {name: 'PHP', icon: 'PHP.png'},
+    {name: 'Kotlin', icon: 'Kotlin.png'},
+    {name: 'C++', icon: 'C++.png'},
+    {name: 'Git', icon: 'Git.png'},
+    {name: 'Bitbucket', icon: 'Bitbucket.png'},
+    {name: 'Github', icon: 'Github.png'},
+    {name: 'Jira', icon: 'Jira.png'},
   ]
 
   constructor(private renderer: Renderer2, private el: ElementRef) {}
