@@ -160,26 +160,11 @@
 
   <section class="projects">
     <h2 class="title">Projects</h2>
-    <app-card-slider></app-card-slider>
+    <card-slider></card-slider>
 
   </section>
 
-  <footer [ngClass]="{'expanded': expandedFooter}">
-    <div class="show-more" (click)="toggleFooter()">
-      <div class="small-cyrcle">
-       <mat-icon style="color: black;" [class.rotate]="expandedFooter">expand_more</mat-icon>
-      </div>
-    </div>
-    <h5>Follow Us</h5>
-    <div class="social">
-      <div class="social-box"><a href="https://www.facebook.com/ahmaed.alhafi/"><img src="icons/facebook.png" width="15px" alt="facebook"></a></div>
-      <div class="social-box"><a href="https://twitter.com/ahmaed_hakam"><img src="icons/twitter.png" width="15px" alt="twitter"></a></div>
-      <div class="social-box"><a href="https://support.google.com/answer/2451065?hl=en"><img src="icons/g+.png" width="15px" alt="google+"></a></div>
-      <div class="social-box"><a href="https://www.instagram.com/ahmaed.alhafi/"><img src="icons/instagram.png" width="15px" alt="instagram"></a></div>
-    </div>
-    <p class="padding-sides" [ngClass]="{'visible': expandedFooter, 'hidden': !expandedFooter}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, repudiandae suscipit, eos nulla velit accusamus id fuga assumenda dicta quaerat recusandae ipsa doloribus eveniet officia nemo ab modi minus ipsum.</p>
-    <p class="padding-sides" [ngClass]="{'visible': expandedFooter, 'hidden': !expandedFooter}">© Copyright, Ahmad Alhafi</p>
-  </footer>
+  <main-footer></main-footer>
 
 </main>
 

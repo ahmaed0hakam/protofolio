@@ -1,0 +1,14 @@
+<footer [ngClass]="{'expanded': expandedFooter}">
+    <div class="show-more" (click)="toggleFooter()">
+      <div class="small-cyrcle">
+       <mat-icon style="color: black;" [class.rotate]="expandedFooter">expand_less</mat-icon>
+      </div>
+    </div>
+    <div class="social">
+        @for (site of socialSites; track $index) {
+            <a class="social-box" [href]="site.link" target="_blank"> <img [src]="iconsPrefix + site.icon + '.png' " width="20px" [alt]="site.name"></a>
+        }
+    </div>
+    <!-- <p class="padding-sides" [ngClass]="{'visible': expandedFooter, 'hidden': !expandedFooter}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, repudiandae suscipit, eos nulla velit accusamus id fuga assumenda dicta quaerat recusandae ipsa doloribus eveniet officia nemo ab modi minus ipsum.</p> -->
+    <p class="padding-sides" [ngClass]="{'visible': expandedFooter, 'hidden': !expandedFooter}">© Copyright, Ahmad Alhafi</p>
+  </footer>

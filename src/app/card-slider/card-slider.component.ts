@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-card-slider',
+  selector: 'card-slider',
   standalone: true,
   imports: [MatIcon, CommonModule],
   templateUrl: './card-slider.component.html',
