@@ -102,7 +102,7 @@ section
       .contact-info
         width: 100%
         display: grid
-        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr))
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
         gap: 20px
 
         p, a
@@ -114,8 +114,11 @@ section
           // gap: 12px
           justify-content: space-evenly
           align-items: flex-start
-          &:not(:last-child)
-            border-right: 2px solid white
+          padding: 0 10px
+          border-left: 2px solid white
+
+          p
+            margin: 0
 
     .my-image
       min-height: calc(100vh - 80px)
