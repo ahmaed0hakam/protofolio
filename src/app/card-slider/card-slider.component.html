@@ -3,7 +3,7 @@
     @for (card of cards; track $index) {
       <div class="card" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
         <h3 class="card-title">{{ card.title }}</h3>
-        <img [src]="card.logo ? card.logo : '../../assets/images/project logos/default.svg.png'" [alt]="card.title">
+        <img [src]="card.logo ? card.logo : 'assets/images/project logos/default.svg.png'" [alt]="card.title">
         <p class="card-desc">{{card.description}}</p>
         <div class="tags">
           <span class="tag"><a [href]="card.link" target="_blank">Github Link <i class="material-icons">open_in_new</i></a></span>

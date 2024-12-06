@@ -18,7 +18,7 @@ import { MatIcon } from '@angular/material/icon';
 })
 export class AppComponent {
   title = 'your-angular-app';
-  private skillsPrefix : string = "../assets/images/skills/";
+  private skillsPrefix : string = "assets/images/skills/";
   skills = [
     {name: 'Angular', link: this.skillsPrefix + 'Angular.png'},
     {name: 'AngularJS', link: this.skillsPrefix + 'AngularJS.png'},
