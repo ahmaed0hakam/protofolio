@@ -69,9 +69,9 @@
         </div>
       </div>
     </div>
-    <div class="my-image"></div>
+    <div class="my-image" style="background-image: url('assets/images/me-normal.png');"></div>
   </section>
-  <section class="section intro cool" (mousemove)="onMouseMove($event)" [ngStyle]="{'opacity': introCollapsed ? '1' : '0'}">
+  <section class="section intro cool" (mousemove)="onMouseMove($event)" [ngStyle]="{'opacity': introCollapsed ? '1' : '0'}" style="background-image: url('assets/images/bg.gif')">
     <div class="my-details">
       <div class="basic-info">
         <p style="font-size: 20px;">Hello there, It's Ahmad Alhafi</p>
@@ -104,7 +104,7 @@
         </div>
       </div>
     </div>
-    <div class="my-image">
+    <div class="my-image" style="background-image: url('assets/images/me-cool.png');">
     </div>
     <div class="drowning-note">
       Goodbye,Theo, I'm leaving for spring.
@@ -142,7 +142,7 @@
     </div>
 
   </section>
-  <section class="skills">
+  <section class="skills" style="background-image: url('assets/images/sower-with-setting-sun-1888.jpg')">
     <h2 class="title">Skills & Abilities</h2>
     <div class="grid bg-trans-gray">
       @for (skill of skills; track $index) {
