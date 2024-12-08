@@ -1,3 +1,5 @@
+@import '../defaults/_variables'
+
 :host
     display: block
     width: 90%
@@ -27,6 +29,9 @@
       max-width: 100px
     .card-desc, .tags
       text-align: left
+    .tag
+        &:hover
+            background-color: darken($primary, 10%)
 
 button
     position: absolute
