@@ -1,6 +1,7 @@
 <main class="main" style="background-color: black;">
 
   <app-navbar></app-navbar>
+<div class="full-width">
   <section class="section intro normal" (mousemove)="onMouseMove($event)" [ngStyle]="{'opacity': introCollapsed ? '0' : '1'}">
     <div class="my-details">
       <div class="basic-info">
@@ -110,7 +111,8 @@
       Goodbye,Theo, I'm leaving for spring.
     </div>
   </section>
-  <section class="about">
+</div>
+  <section class="about" id="about">
     <h2 class="title">About Me</h2>
     <div class="row">
       <div class="image">
@@ -142,7 +144,7 @@
     </div>
 
   </section>
-  <section class="skills" style="background-image: url('assets/images/sower-with-setting-sun-1888.jpg')">
+  <section class="skills" id="skills" style="background-image: url('assets/images/sower-with-setting-sun-1888.jpg')">
     <h2 class="title">Skills & Abilities</h2>
     <div class="grid bg-trans-gray">
       @for (skill of skills; track $index) {
@@ -158,13 +160,13 @@
 
   </section>
 
-  <section class="projects">
+  <section class="projects" id="projects">
     <h2 class="title">Projects</h2>
     <card-slider></card-slider>
 
   </section>
 
-  <main-footer></main-footer>
+  <main-footer id="contact"></main-footer>
 
 </main>
 
