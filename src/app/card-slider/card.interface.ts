@@ -4,5 +4,6 @@ export interface ICard {
     link: string,
     figma?: string,
     logo?: string,
-    slides?: string
+    slides?: string,
+    demo? : string
 }
