@@ -122,7 +122,9 @@
         <div>
           <h3>I'm Ahmad</h3>
           <span class="tag">Web developer</span>
-          <p>I am a Web Developer specializing in dynamic web solutions using Python, JavaScript, TypeScript, and PHP. With a strong focus and experience in UI/UX design, I aim to deliver intuitive and visually appealing user interfaces while ensuring efficiency and innovation across the software development life cycle.</p>
+          <p>
+            I'm a Software Developer passionate about crafting intuitive, responsive web applications. Skilled in Angular and UI/UX design, I focus on delivering user-friendly, visually appealing experiences. I enjoy solving challenges and integrating innovative features to enhance usability and functionality.
+          </p>
         </div>
         <div>
           <h3>Education</h3>
@@ -130,13 +132,16 @@
         </div>
         <div>
           <h3>Experience</h3>
-          <h4>Software Engineer | Classera (1 year 6 months)</h4>
-         <ul>
-          <li>Developed frontend interfaces using Angular, AngularJS, and SASS for streamlined styling.</li>
-            <li>Integrated frontend components with CakePHP and MySQL backend systems.</li>
-            <li>Ensured application robustness and performance through rigorous testing and optimization.</li>
-            <li>Collaborated on team code reviews and maintained coding standards.</li>
-         </ul>
+          @for (experience of experiences; track $index) {
+            <div class="margin-bottom-20px">
+              <h4>{{experience.position}} | {{experience.company}} ({{experience.duration}})</h4>
+             <ul>
+              @for (point of experience.descriptionPoints; track $index) {
+                <li>{{point}}</li>
+              }
+             </ul>
+            </div>
+          }
         </div>
 
       </div>
