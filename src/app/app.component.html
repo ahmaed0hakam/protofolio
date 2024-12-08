@@ -171,6 +171,22 @@
 
   </section>
 
+  <section class="achievements" id="achievements" style="background-image: url('assets/images/almond_blossom.jpg')">
+    <h2 class="title black">Achievements</h2>
+    <div class="achievements-container">
+      @for (achievement of achievements; track $index) {
+        <div class="achievement-box">
+          <div class="achievement-icon">
+            <img [src]="achievementsPrefix + achievement.icon" [alt]="achievement.name" width="100px">
+          </div>
+          <h3>{{achievement.name}}</h3>
+          <p>{{achievement.date}}</p>
+        </div>
+      }
+    </div>
+
+  </section>
+
   <main-footer id="contact"></main-footer>
 
 </main>
