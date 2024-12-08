@@ -10,7 +10,7 @@
         <div class="typing-container">
           <h1 class="typing-text">Web Developer</h1>
         </div>
-        <div style="position: relative;">
+        <div class="relative">
           <p class="wise-p">When it comes to 
             <span class="art" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" (click)="toggleIntro()" title="Click me! hehe">art</span>, it's important not to hide the madness.</p>
           <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="fire-svg">
@@ -80,7 +80,7 @@
         <div class="typing-container">
           <h1 class="typing-text">Web Developer</h1>
         </div>
-        <div style="position: relative;">
+        <div class="relative">
           <p class="wise-p">When it comes to 
             <span class="art" (click)="toggleIntro()" title="Click me! hehe">art</span>, it's important not to hide the madness.</p>
             <img src="assets/images/fire.svg" alt="" class="fire-svg">
@@ -168,6 +168,22 @@
   <section class="projects" id="projects">
     <h2 class="title">Projects</h2>
     <card-slider></card-slider>
+
+  </section>
+
+  <section class="achievements" id="achievements" style="background-image: url('assets/images/almond_blossom.jpg')">
+    <h2 class="title black">Achievements</h2>
+    <div class="achievements-container">
+      @for (achievement of achievements; track $index) {
+        <div class="achievement-box">
+          <div class="achievement-icon">
+            <img [src]="achievementsPrefix + achievement.icon" [alt]="achievement.name" width="100px">
+          </div>
+          <h3>{{achievement.name}}</h3>
+          <p>{{achievement.date}}</p>
+        </div>
+      }
+    </div>
 
   </section>
 

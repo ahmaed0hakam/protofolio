@@ -100,6 +100,36 @@ ul
   display: flex
   flex-direction: column
 
+.relative
+  position: relative
+
+.black
+  color: black
+
+.white
+  color: white
+
+.achievements-container
+  display: flex
+  flex-wrap: wrap
+  gap: 20px
+  padding: 20px
+
+  .achievement-box
+    flex-grow: 1
+    flex-basis: calc(33.33% - 20px)  /* This ensures each box takes equal width, subtracting the gap */
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    min-width: 300px
+    gap: 10px
+    background-color: rgba(255, 255, 255, 0.8)
+    border-radius: 10px
+    padding: 20px
+    color: black
+
 /* Style for the entire scrollbar */
 ::-webkit-scrollbar
   width: 12px

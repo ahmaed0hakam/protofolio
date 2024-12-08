@@ -14,6 +14,14 @@ interface Experience {
   descriptionPoints: string[];
   duration?: string;
 }
+
+interface Achievement {
+  name: string;
+  issuer: string;
+  date: Date  | string;
+  icon: string;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -77,6 +85,22 @@ export class AppComponent {
       ]
     }
   ];
+
+  achievementsPrefix: string = "assets/images/achievements/";
+  achievements: Achievement[] = [
+    {
+      name: '1st Place at Nasa Space Apps Challenge Ar-Ramtha',
+      issuer: 'NASA - National Aeronautics and Space Administration',
+      date: "Oct 2024",
+      icon: 'nasa.png'
+    },
+    {
+      name: '1st Place at the Gen-AI Hackathon',
+      issuer: 'Tahaluf Al Emarat Technical Solutions تحالف الإمارات للحلول التقنية',
+      date: "Jan 2024",
+      icon: 'tahaluf.png'
+    }
+  ]
 
   /**
    * Calculates the duration between two dates in years and months.
