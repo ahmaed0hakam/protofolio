@@ -13,7 +13,7 @@ import { ICard } from './card.interface';
 })
 export class CardSliderComponent {
 
-  logosPrefix = "assets/images/project logos/"
+  logosPrefix = "assets/images/projects-logos/"
   cards: ICard[] = [
     {
       title: 'Shakey',
