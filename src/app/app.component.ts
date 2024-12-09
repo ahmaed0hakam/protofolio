@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 import { CardSliderComponent } from './card-slider/card-slider.component';
 import { MatIcon } from '@angular/material/icon';
 import { FooterComponent } from './footer/footer.component';
+import { Title } from '@angular/platform-browser';
+import { fromEvent } from 'rxjs';
+
 
 interface Experience {
   company: string;
@@ -132,11 +135,23 @@ export class AppComponent {
    * @param {Renderer2} renderer - Angular's Renderer2 for DOM manipulation.
    * @param {ElementRef} el - Reference to the root element of the component.
    */
-  constructor(private renderer: Renderer2, private el: ElementRef) {
+  constructor(private renderer: Renderer2, private el: ElementRef, private titleService: Title) {
     this.experiences = this.experiences.map(experience => ({
       ...experience,
       duration: this.calculateDuration(experience.startDate, experience.endDate)
     }));
+  }
+
+  ngOnInit() {
+    this.titleService.setTitle('Portfolio | Ahmad Alhafi');
+  
+    fromEvent(document, 'visibilitychange').subscribe(() => {
+      if (document.hidden) {
+        this.titleService.setTitle('Bruh, Come back!');
+      } else {
+        this.titleService.setTitle('Portfolio | Ahmad Alhafi');
+      }
+    });
   }
 
   /**
